@@ -29,30 +29,32 @@
     </div>
     <script>
         
-         users = [{name:'Sachin',designation:'Front End Dev',image:'./images/userImg.png',location:'Mumbai'},
-                 {name:'Ramesh',designation:'Desiner',image:'./images/userImg4.png',location:'Pune'},
-                 {name:'Sneha',designation:'Software Developer',image:'./images/userImg2.png',location:'Delhi'},
-                 {name:'Gaurav',designation:'Desktop Engineer',image:'./images/userImg3.png',location:'Hydrabad'}
-                ]
-        
-                var output="";
-                for(i=0;i<users.length;i++){
-                    output+="<tr><td>" +users[i].name + "</td><td>" + users[i].designation + "</td><td class='userImgWidth'> <img src=" + users[i].image +"></td><td>" +users[i].location+"</td></tr>";
-                }
-                document.getElementById("content").innerHTML=output;
-
-
-        // users = [{name:'Sachin',designation:'Front End Dev',image:'./images/userImg.png',location:'Mumbai'},
+        //  users = [{name:'Sachin',designation:'Front End Dev',image:'./images/userImg.png',location:'Mumbai'},
         //          {name:'Ramesh',designation:'Desiner',image:'./images/userImg4.png',location:'Pune'},
         //          {name:'Sneha',designation:'Software Developer',image:'./images/userImg2.png',location:'Delhi'},
         //          {name:'Gaurav',designation:'Desktop Engineer',image:'./images/userImg3.png',location:'Hydrabad'}
         //         ]
         
-        //         var output = map((items) => {
-        //             "<tr><td>" +users[items].name + "</td><td>" + users[itmes].designation + "</td><td class='userImgWidth'> <img src=" + users[items].image +"></td><td>" +users[items].location+"</td></tr>";
-        //         });
-        //         document.getElementById("content").innerHTML = output;
-               
+        //         var output="";
+        //         for(i=0;i<users.length;i++){
+        //             output+="<tr><td>" +users[i].name + "</td><td>" + users[i].designation + "</td><td class='userImgWidth'> <img src=" + users[i].image +"></td><td>" +users[i].location+"</td></tr>";
+        //         }
+        //         document.getElementById("content").innerHTML=output;
+
+
+        users = [
+                 {name:'Sachin',designation:'Front End Dev',image:'./images/userImg.png',location:'Mumbai'},
+                 {name:'Ramesh',designation:'Desiner',image:'./images/userImg4.png',location:'Pune'},
+                 {name:'Sneha',designation:'Software Developer',image:'./images/userImg2.png',location:'Delhi'},
+                 {name:'Gaurav',designation:'Desktop Engineer',image:'./images/userImg3.png',location:'Hydrabad'}
+                ]
+        
+                   users.map((item) => {
+                    var output = "<tr><td>" + item.name + "</td><td>" + item.designation + "</td><td class='userImgWidth'> <img src=" + item.image +"></td><td>" + item.location + "</td></tr>";
+                    document.getElementById("content").insertAdjacentHTML("beforeend",output);
+                    // console.log(item)
+                    // console.log(item.location)
+                });
     </script>
 </body>
 </html>
