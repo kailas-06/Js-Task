@@ -1,0 +1,54 @@
+body,.hero{
+    background-color: #ccc;
+}
+.selector{
+    width: 350px;
+    cursor: pointer;
+}
+p{
+    margin: 0;
+}
+#selectField{
+    width: 100%;
+    background-color: pink;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: rgba(225,225,225,.7);
+    border-radius: 8px;
+    position: relative;
+}
+#selectField:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #707070;
+    position: absolute;
+    right: 25px;
+    top: 46%;
+}
+#list{
+    width: 100%;
+    background: rgba(255,255,255,.7);
+    border-radius: 8px;
+    overflow: hidden;
+    padding-left: 0;
+    cursor: pointer;
+}
+.option-hide{
+    visibility: hidden;
+}
+.options{
+    width: 100%;
+    padding: 15px;
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.options:hover{
+    background-color: #f12b20;
+    color: #fff;
+}

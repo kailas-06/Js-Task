@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .inlineDiv {
+            display: inline-block;
+            float: left;
+        }
+
+        #holder {
+            width: 100%;
+        }
+        .list-group{
+            list-style-type: none;
+        }
+        .panel-default{
+            display: flex;
+            gap: 10px;
+        }
+        .panel-more1 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+        .panel-more1:first-child{
+            background-color: blue;
+        }
+        .panel-more1:nth-child(2){
+            background-color: red;
+        }
+        .panel-more1:nth-child(3){
+            background-color: yellow;
+        }
+        .panel-more1:nth-child(4){
+            background-color: tan;
+        }
+        .panel-more1:nth-child(5){
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="listContainer">
+        <div>
+            <table class="list-group">
+                <tbody>
+                    <tr class="panel-body panel panel-default">
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        insertDiv = function () {
+            var parent = document.getElementsByClassName("panel-body")[0];
+            var installments = ['Blue', 'Red', 'Yellow', 'Tan', 'Green'];
+            installments.forEach(function (e) {
+                var installment = document.createElement('td');
+                var newdiv = document.createElement('div');
+                installment.classList.add('panel-more1');
+                installment.appendChild(newdiv);
+                parent.appendChild(installment);
+            });
+        }
+        window.onload = insertDiv
+    </script>
+</body>
+
+</html>
